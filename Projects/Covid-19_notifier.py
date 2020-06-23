@@ -6,15 +6,6 @@ source = requests.get("https://www.worldometers.info/coronavirus/country/india/"
 
 soup = BeautifulSoup(source, "lxml")
 
-# for article in soup.find_all("div", id="maincounter-wrap"):
-#     try:
-#         heading = article.h1.text
-#         print(heading)
-
-#         cases = article.div.span.text
-#         print(cases)
-#     except Exception as e:
-#         continue
 
 date = soup.find("div", class_="news_date")
 
